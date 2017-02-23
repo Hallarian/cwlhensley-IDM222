@@ -1,46 +1,55 @@
 * {box-sizing: border-box; }
 html {
   font-size: 100%;
-
   min-height: 100%;
 }
 
 body {
+  background-image: url("Imagery/tempBckgrnd1.jpg");
+  max-width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
   background-color: #F4F4E9;
   font: 100%/1.4 Arial, sans-serif;
-  margin:0rem;
-  padding:0;
-  height:100%;
+  margin: 0rem;
+  padding: 0;
 }
 
 #Container {
-  min-height:100%;
+  height: 100%;
   position:relative;
   margin-right: 0rem; 
   border: 0;
   padding: 0;
 }
+
 #header {
+  width: 100%;
   padding: 0rem;
-  background-color: #F4F4E9;
-  text-align: center;
-  object-position: left;
+  background-color: none;
 }
+
 #content {
-  min-height: 100%;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  align-items: flex-start;
+  background-color: #F4F4E9;
+  max-width: 100%;
+  height: auto;
   padding-bottom: 5rem;/* Height of the footer element */
   margin: 0rem;
 }
 
 #aside {
   background-color: none;
-  max-width: 33.5%
-  min-height: 100%;
   margin: 0rem;
   border: 0rem;
   padding: 0rem;
   line-height: 1rem;
+  max-width: 33.3%;
+  height: auto;
 }
+
 #footer {
   background: none;
   font-size: 75%;
@@ -50,6 +59,37 @@ body {
   left:0;
   color: black;
   font-family: 'Spinnaker', sans-serif;
+}
+
+.indexfooter {
+  background: none;
+  font-size: 75%;
+  width:100%;
+  height: 2rem;
+  bottom:0;
+  left:0;
+  color: black;
+  font-family: 'Spinnaker', sans-serif;
+  margin-top: 5rem;
+}
+
+.catHead{
+  max-width: 100%;
+}
+
+.paragraph {
+  display: flex;
+  flex-flow: column wrap;
+  padding-top: 0;
+  padding: 1rem;
+  max-width: 66.7%;
+}
+
+.resume {
+  margin: 1rem;
+  font-size:calc(85% + .25vw);
+  color: black;
+  max-width: 65.5%;
 }
 /*
   _____                                 _           
@@ -61,28 +101,53 @@ body {
                  | |                                
                  |_| 
 */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 300px) {
     body {
         background-color: #F4F4E9;
-
     }
+    #content {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+    }
+
+    .paragraph {
+        max-width: 100%;
+        height: auto; 
+    }
+
 }
 
 @media screen and (min-width: 768px) {
     body {
         background-color: #F4F4E9;
+        margin: 1px;
+        padding: 1px;
     }
-  .wrapper {
-    margin: 3em;
-    padding: 2em;
-  }
+    #content {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+    }
+
+    .paragraph {
+        max-width: 50%;
+        height: auto; 
+    }
 }
 
 @media screen and (min-width: 1024px) {
     body {
         background-color: #F4F4E9;
     }
-  .wrapper { padding: 3em; }
+    #content {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-around;
+    }
+
+    .paragraph {
+        max-width: 66.7%;
+        height: auto;
+    }
 }
 
 /*
@@ -94,78 +159,93 @@ body {
  |_| \_|\__,_| \_/ |____/ \__,_|_| 
 */
 nav {
-    background-color: none;
+    background-color: #F4F4E9;
     color: #F4F4E9;
     font-size:calc(45% + 1vw);
     font-family: "Spinnaker", sans-serif;
     text-align: right;
     line-height: 1.5rem; 
     padding-right: 1rem;
-    padding-top: .20rem;
-    border: 0rem;
-    margin: .5rem 0rem 0rem 0rem;
+    border: .5rem;
+    margin: 1rem 0rem 0rem 0rem;
     width: 100%;
-    height: 2rem;
+    }
+
+.nav2 {
+  color: #882601;
+  background-color: #F4F4E9;
+  font-size:calc(70% + .90vw);
+  font-family: "Spinnaker", sans-serif;
+  line-height: 1.5rem;
+  margin: 0rem;
+  border: 0rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 	ul {
+      color: #B77000;
     	list-style-type: none;
-    	margin: 0;
-    	border: 0;
-      padding: 0;
+      background-color: none;
+      line-height: 2rem;
+    	border: 0 0 0 0;
+      padding: 0 0 0 0;
+      margin: 0 auto;
 
-		}
+	}
 
 	li {
     	display: inline;
-    	margin: 0;
-      margin-left: 20px;
-		}
+      margin-left: 15px;
+      margin-right: 15px;
+	}
 
-	a {
+	a { 
   		color: #12436B;
   		text-decoration: none;
   		font-weight: bold;
       margin: 0;
       border: 0;
       padding: 0;
-  		}
+ 	}
 
-.nav2 {
-  color: #882601;
-  background-color: #F4F4E9;
-  font-size:calc(45% + 1vw);
-	font-family: "Spinnaker", sans-serif;
-	font-weight: normal;
-	line-height: 2em;
-	height: 2em;
-	margin: 0em;
-  border: 0em;
-  padding: 0rem;
-}
-
-img {
+.logo {
+    display: flex;
+    justify-content: flex-start;
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
 }
 
-.bioImg {
-  margin-left: 5rem;
-  margin-right: 0rem;
-  margin-bottom: 1rem;
-  border-left: 1rem;
-  padding-left: 1rem;
-
+img {
+  max-width: 100%;
+  height: auto;
 }
+
+.bioImage {
+  margin: 1rem;
+  padding: 0;
+  border: 0;
+}
+
+.poster {
+  margin: 1rem;
+  padding: 0;
+  border: 0;
+}
+
+.caption {
+  font-style: italic;
+}
+
 
 /*
   _    _                _           
  | |  | |              | |          
- | |__| | ___  __ _  __| | ___ _ __ 
- |  __  |/ _ \/ _` |/ _` |/ _ \ '__|
- | |  | |  __/ (_| | (_| |  __/ |   
- |_|  |_|\___|\__,_|\__,_|\___|_|  
+ | |__| | ___  __ _  __| |
+ |  __  |/ _ \/ _` |/ _` |
+ | |  | |  __/ (_| | (_| |
+ |_|  |_|\___|\__,_|\__,_| 
 */                                                                      
 h1 {
     column-span: all;
@@ -182,18 +262,11 @@ h1 {
     border: 0em;
     margin-top: 20px;
     margin-bottom: 0px;
-  }
+}
 
 h2{
-    column-span: all;
-    font-family: "Book Antiqua", serif;
-    color: white;
-    background-color: #015395;
-    padding-left: 1rem;
-    margin: 1rem auto;
-
-}
-h3 {
+    display: flex;
+    justify-content: flex-end;
     color: #782320;
     font-size:calc(45% + 2vw);
     font-family: 'Jura', sans-serif;
@@ -203,9 +276,20 @@ h3 {
     line-height: .5rem; 
     padding: 1rem;
     border: 0rem;
-    margin: 0rem;
+    margin-bottom: 1rem;
     width: 100%;
-    height: 100%;
+    height: 100%; 
+
+}
+h3 {
+    font-size:calc(100% + 2vw);
+    column-span: all;
+    font-family: "Book Antiqua", serif;
+    color: white;
+    background-color: #015395;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    padding-left: 1rem;
 }
 
 h5 {
@@ -219,25 +303,5 @@ h6 {
   font: 50%/1.4 Arial, sans-serif;
   padding-right: 1rem;
 }
-
-.catHead{
-  max-width: 100%;
-}
-.paragraph {
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-  -webkit-column-width: 200px;
-  -moz-column-width: 200px;
-  column-width: 200px;
-  margin: 1rem;
-  font-size:calc(85% + .25vw);
-  color: black;
-  max-width: 100%;
-}
-.resume {
-  margin: 1rem;
-  font-size:calc(85% + .25vw);
-  color: black;
-  max-width: 65.5%;
+  
 }
