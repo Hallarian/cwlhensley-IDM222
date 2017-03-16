@@ -1,0 +1,202 @@
+/* CSS for adding content example */
+* {box-sizing: border-box; }
+body {
+  background-repeat: no-repeat;
+    margin: 12px;
+  background-color: black;
+  /* transition on change */
+  opacity: 1;
+  transition: 2s opacity;
+}
+
+body.whiteScreen {
+  opacity: 0;
+  transition: none;
+}
+
+#container {
+  background-image: url(../ZodiacImages/background.jpg);
+  background-color: none;
+  width: 800px;
+  height: 600px;
+  margin: auto;
+  border: auto;
+  padding: auto;
+  position: center;
+}
+
+#rowReverse {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+}
+
+#wrapper {
+    background-color: black;
+  	font-family: Ringbearer, serif;
+    font-size: 100%;
+  	color: white;
+  	max-width: 250px;
+    padding: 5px 5px 0px 5px;
+    margin: 15px 15px 15px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+}
+    input {
+      	font-family: MorrisRoman-Black, serif;
+        font-size: 100%;
+        border: 10px none;
+        border-radius: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+#allpics {
+    margin: 15px;
+    margin-right: 260px;
+}
+
+#allpics img {
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    border-radius: 5px;
+}
+
+#allpics img.display {
+    opacity: 1;
+}
+
+#alltxt {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .15);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    text-shadow: 1.5px 1.5px 1.5px black; 
+    font-family: MorrisRoman-Black, serif;
+    color: white;
+    font-size: 115%;
+    padding: 5px 5px 0px 5px;
+    margin: 15px 15px 15px 15px;
+    width: 260px;
+    height: 370px;
+}
+
+h1 {
+    color: #343f2f;
+  	font-family: Ringbearer, serif;
+    font-position: center;
+  	font-size: 300%;
+    margin: 0rem 0rem 0rem .5rem;
+    text-shadow: 1px 1px 1px white;
+  }
+
+h2 {
+ 	  font-family: Aniron, serif;
+    text-align: center;
+    text-shadow: .4px .4px .4px white;
+  	color: #7C0F01;
+    margin: 0;
+    padding: 0;
+  }
+
+.row1 {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 15px;                                  
+    width: 600px;
+    }
+
+.row2 {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 600px;
+    }
+
+  ul {    
+      list-style-type: none;
+      color: white;
+      margin: 0 0 0 0;
+      border: 0 0 0 0;
+      padding: 0 0 0 0;
+    } 
+
+  li {
+    background-color: #4f4722;
+    font-family: MorrisRoman-Black, serif;
+    color: white;
+    opacity:.80;
+    display: inline-block;
+    text-align: center;
+    min-width: 6rem;
+    max-width: 6rem;
+    padding: 0rem 0rem 0rem 0rem;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    border-color: white;
+    margin: 0 0 0 0;
+}
+
+/* To convert cursor to pointer */
+#aragorn, #faramir, #gimli, #frodo, #boromir, #pippin, #theoden, #samwise, #gandalf, #legolas, #merry, #treebeard {
+  cursor: pointer;
+  padding: 1rem;
+} 
+ 
+/* HELP container */
+.popup {
+    font-family: Aniron, serif;
+    font-size: 70%;
+    box-shadow: 2px 2px 2px black;
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    background-color: #c3b291;
+    margin-top: 30px;
+    margin-right: 15px;
+    border: 1px;
+    border-radius: 10px;
+    padding: 5px;
+}
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    font-size: 70%;
+    visibility: hidden;
+    width: 579px;
+    background-color: #243022;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 15px 15px 15px 15px;
+    position: absolute;
+    z-index: 1;
+    top: 19.20%;
+    left: 35.80%;
+}
+/* Popup arrow */
+.popup .popuptext: after {
+    content: "";
+    margin-left: 5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
