@@ -20,6 +20,24 @@
   <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Spinnaker" rel="stylesheet">
+
+
+  <style type = "text/css">
+
+  @font-face {
+  font-family: "Aniron";
+  src: url("fonts/anirb.ttf");
+  }
+  @font-face {
+  font-family: "Book Antiqua";
+  src: url("fonts/ANTQUAB.TTF");
+  }
+  @font-face {
+  font-family: "MorrisRoman-Black";
+  src: url("fonts/MorrisRoman-Black.ttf");
+  }
+
+  </style>
     
   <!--
   $$$$$$\   $$$$$$\   $$$$$$\  
@@ -34,17 +52,18 @@
   <link rel="stylesheet" type="text/css" href="mystylesheet.css">
 </head>
 
-<body>
+<body class="whiteScreen" onload="fade2Content();">
+
   <!--
     /$$$$$$                        /$$               /$$                              
    /$$__  $$                      | $$              |__/                              
-  | $$  \__/  /$$$$$$  /$$$$$$$  /$$$$$$    /$$$$$$  /$$ /$$$$$$$   /$$$$$$   /$$$$$$ 
-  | $$       /$$__  $$| $$__  $$|_  $$_/   |____  $$| $$| $$__  $$ /$$__  $$ /$$__  $$
-  | $$      | $$  \ $$| $$  \ $$  | $$      /$$$$$$$| $$| $$  \ $$| $$$$$$$$| $$  \__/
-  | $$    $$| $$  | $$| $$  | $$  | $$ /$$ /$$__  $$| $$| $$  | $$| $$_____/| $$      
-  |  $$$$$$/|  $$$$$$/| $$  | $$  |  $$$$/|  $$$$$$$| $$| $$  | $$|  $$$$$$$| $$      
-   \______/  \______/ |__/  |__/   \___/   \_______/|__/|__/  |__/ \_______/|__/ -->
-  <div id="Container">
+  | $$  \__/  /$$$$$$  /$$$$$$$  /$$$$$$    /$$$$$$  /$$ /$$$$$$$
+  | $$       /$$__  $$| $$__  $$|_  $$_/   |____  $$| $$| $$__  $$
+  | $$      | $$  \ $$| $$  \ $$  | $$      /$$$$$$$| $$| $$  \ $$|
+  | $$    $$| $$  | $$| $$  | $$  | $$ /$$ /$$__  $$| $$| $$  | $$|     
+  |  $$$$$$/|  $$$$$$/| $$  | $$  |  $$$$/|  $$$$$$$| $$| $$  | $$|      
+   \______/  \______/ |__/  |__/   \___/   \_______/|__/|__/  |__/ -->
+  <div id="homeContainer">
 
     <!--      _______  _______  ______   _______  _______ 
     |\     /|(  ____ \(  ___  )(  __  \ (  ____ \(  ____ )
@@ -55,22 +74,6 @@
     | )   ( || (____/\| )   ( || (__/  )| (____/\| ) \ \__
     |/     \|(_______/|/     \|(______/ (_______/|/   \__/ -->
     <div id="header">
-  
-     <!--
-      _   _             ____             
-     | \ | |           |  _ \            
-     |  \| | __ ___   _| |_) | __ _ _ __ 
-     | . ` |/ _` \ \ / /  _ < / _` | '__|
-     | |\  | (_| |\ V /| |_) | (_| | |   
-     |_| \_|\__,_| \_/ |____/ \__,_|_| -->
-      
-      <nav>
-        <ul>
-        <li><a href="digitalmedia.html" style="text-decoration:none">DIGITAL MEDIA</a></li>
-        <li><a href="writtenwork.html" style="text-decoration:none">WRITTEN WORK</a></li>
-        <li><a href="aboutme.html" style="text-decoration:none">ABOUT ME</a></li>
-        </ul>
-      </nav>
 
       <!--
        _                       
@@ -83,19 +86,23 @@
                     |___/                     
       -->
 
-      <div class="logo"><a href="index.html"><img src="Imagery/Logo01.png" alt="Communicationist"></a></div>
+      <div class="mainLogo"><a href="index.html"><img src="Imagery/mainLogo.png" alt="Communicationist"></a></div>
 
-      <!--
-       _______          _ _            
-      |__   __|        | (_)           
-         | | __ _  __ _| |_ _ __   ___ 
-         | |/ _` |/ _` | | | '_ \ / _ \
-         | | (_| | (_| | | | | | |  __/
-         |_|\__,_|\__, |_|_|_| |_|\___|
-                   __/ |               
-                  |___/ -->
+     <!--
+      _   _             ____             
+     | \ | |           |  _ \            
+     |  \| | __ ___   _| |_) | __ _ _ __ 
+     | . ` |/ _` \ \ / /  _ < / _` | '__|
+     | |\  | (_| |\ V /| |_) | (_| | |   
+     |_| \_|\__,_| \_/ |____/ \__,_|_| -->
       
-      <h2>Designer, Developer, Storyteller</h2>
+      <nav>
+        <ul>
+        <li><div class="borderBox"><a href="digitalmedia.html" style="text-decoration:none">DIGITAL MEDIA</a></div></li>
+        <li><div class="borderBox"><a href="writtenwork.html" style="text-decoration:none">WRITTEN WORK</a></div></li>
+        <li><div class="borderBox"><a href="aboutme.html" style="text-decoration:none">ABOUT ME</a></div></li>
+        </ul>
+      </nav>
 
     </div><!-- #header -->
 
@@ -115,6 +122,16 @@
 
     </div><!-- End Footer -->
 
-  </div><!-- #container -->    
+  </div><!-- #container -->
+
+  <!--
+        _  _____ 
+       | |/ ____|
+       | | (___  
+   _   | |\___ \ 
+  | |__| |____) |
+   \____/|_____/ 
+        -->
+  <script src="myjavascript.js"></script>
 </body>
 </html>
